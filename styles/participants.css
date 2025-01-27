@@ -1,0 +1,150 @@
+.participants {
+    font-family: var(--regular-font-family);
+    text-transform: none;
+    color: var(--regular-color);
+    
+}
+
+.participants__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.participants__header_title {
+    font-size: 54px;
+    font-family: var(--accent-font-family);
+    font-weight: normal;
+    line-height: 64px;
+    text-transform: uppercase;
+}
+
+.participants__header_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+
+.participants__header_nav_button {
+    background-color: transparent;
+}
+
+.participants_button_back:hover circle,
+.participants_button_next:hover circle {
+    fill: var(--button-accent-color);
+}
+
+.participants_back:disabled .participants_button_back circle,
+.participants_next:disabled .participants_button_next circle {
+    fill: var(--button-disabled);
+}
+
+.participants__list {
+    width: 100%;
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(6, 33%);
+    justify-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+    overflow-x: scroll;
+    /* scrollbar-width: 0; */
+    scroll-snap-type: x mandatory;
+}
+
+.participants__list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.participants__list_card {
+    flex-shrink: 3;
+    width: min(100%, 394px);
+    padding: 0 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.participants__list_card_image {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.participants__list_card_name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.participants__list_card_desc {
+    font-size: 20px;
+    color: var(--transparent-text);
+    margin-bottom: 20px;
+}
+
+.participants__list_card_button {
+    background-color: transparent;
+    border: 1px solid var(--note-color);
+    border-radius: 40px;
+    width: 113px;
+    height: 35px;
+    font-size: 16px;
+    color: var(--note-color);
+    margin-bottom: 140px;
+}
+
+@media (width <= 768px) {
+    .participants {
+        position: relative;
+    }
+
+    .participants__header_nav {
+        position: absolute;
+        justify-content: center;
+        margin-bottom: 5%;
+        inset: 0;
+        align-items: end;
+    }
+
+    .participants__header_nav_button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .participants_button_back,
+    .participants_button_next {
+        width: 36px;
+    }
+
+    .participants__header_title {
+        font-size: 36px;
+    }
+
+    .participants__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .participants__list_card {
+        flex: 1;
+        min-width: 100%;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .participants__list_card_image {
+        width: 70%;
+        margin-bottom: 28px;
+    }
+
+    .participants__list_card_button {
+        margin-bottom: 176px;
+    }
+}

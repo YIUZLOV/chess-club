@@ -1,0 +1,15 @@
+:root {
+    --regular-color: #313131;
+    --transparent-text: rgba(49, 49, 49, .5);
+    --accent-color: #F54932;
+    --note-color: #3057A2;
+    --rare-color: #fff;
+    --regular-font-family: "Golos Text", serif;
+    --accent-font-family: "Merriweather", serif;
+    --button-color: #1F1F1F;
+    --button-accent-color: #FBCE51;
+    --table-color: #D0D0D0;
+    --footer-color: #E9DED4;
+    --button-disabled: #D6D6D6;
+
+}
